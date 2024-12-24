@@ -27,7 +27,7 @@ export default defineComponent({
     onMounted(() => {
       const token = window.localStorage.getItem('token')
       if (token) {
-        router.push({ name: 'Feedback' })
+        router.push({ name: 'Feedbacks' })
       }
     })
 
