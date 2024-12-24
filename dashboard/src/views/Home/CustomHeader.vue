@@ -11,10 +11,16 @@
         </div>
 
         <div class="flex">
-          <button class="px-6 py-2 font-bold rounded-full text-white focus:outline-none">
+          <button
+            @click="() => emit('create-account')"
+            class="px-6 py-2 font-bold rounded-full text-white focus:outline-none"
+          >
             Crie uma conta
           </button>
-          <button class="px-6 py-2 font-bold bg-white rounded-full focus:outline-none">
+          <button
+            @click="() => emit('login')"
+            class="px-6 py-2 font-bold bg-white text-brand-main rounded-full focus:outline-none"
+          >
             Entrar
           </button>
         </div>
@@ -43,8 +49,8 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  setup() {
-
+  setup(_, { emit }) {
+    return { emit }
   },
 })
 </script>
